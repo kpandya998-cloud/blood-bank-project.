@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact BloodConnect for emergency numbers and support." />
+  <title>Contact | BloodConnect</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.4/font/bootstrap-icons.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <header class="sticky-top shadow-sm bg-white">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+      <div class="container">
+        <a class="navbar-brand fw-bold text-danger" href="../index.html">BloodConnect</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#contactNavbar" aria-controls="contactNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="contactNavbar">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="search-blood.html">Search Blood</a></li>
+            <li class="nav-item"><a class="nav-link" href="hospitals.html">Hospitals</a></li>
+            <li class="nav-item"><a class="nav-link" href="become-donor.html">Become Donor</a></li>
+            <li class="nav-item"><a class="nav-link" href="request-blood.html">Request Blood</a></li>
+            <li class="nav-item"><a class="nav-link" href="emergency.html">Emergency</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item"><a class="btn btn-outline-danger btn-sm ms-lg-3" href="login.html">Login</a></li>
+            <li class="nav-item"><a class="btn btn-danger btn-sm ms-2" href="register.html">Register</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="bg-light py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-7">
+          <div class="card rounded-4 shadow-sm border-0 p-4">
+            <h2 class="fw-bold mb-3">Get in Touch</h2>
+            <p class="text-muted">Reach out to BloodConnect for help desk support, emergency contacts, or hospital coordination.</p>
+            <form class="row g-3 needs-validation" novalidate>
+              <div class="col-md-6">
+                <label class="form-label">Full Name</label>
+                <input type="text" class="form-control" required>
+                <div class="invalid-feedback">Please enter your name.</div>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control" required>
+                <div class="invalid-feedback">Please enter a valid email address.</div>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Phone</label>
+                <input type="tel" class="form-control" required>
+                <div class="invalid-feedback">Phone number is required.</div>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Subject</label>
+                <input type="text" class="form-control" required>
+                <div class="invalid-feedback">Subject is required.</div>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Message</label>
+                <textarea class="form-control" rows="5" required></textarea>
+                <div class="invalid-feedback">Please share your message.</div>
+              </div>
+              <div class="col-12 d-grid">
+                <button type="submit" class="btn btn-danger btn-lg">Send Message</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="card rounded-4 shadow-sm border-0 p-4 h-100">
+            <h5 class="fw-bold">Emergency Contacts</h5>
+            <p class="text-muted">Quick access to urgent help lines and support services.</p>
+            <ul class="list-unstyled mb-4">
+              <li class="mb-3"><strong>National Helpline</strong><br /><span class="text-muted">112</span></li>
+              <li class="mb-3"><strong>Blood Support Desk</strong><br /><span class="text-muted">+91 99887 66554</span></li>
+              <li class="mb-3"><strong>Email Support</strong><br /><span class="text-muted">support@bloodconnect.org</span></li>
+            </ul>
+            <div class="ratio ratio-4x3 rounded-4 overflow-hidden border">
+              <iframe src="https://maps.google.com/maps?q=New%20Delhi&t=&z=13&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer bg-white py-4 border-top">
+    <div class="container text-center text-muted">&copy; 2026 BloodConnect. All rights reserved.</div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/script.js"></script>
+</body>
+</html>

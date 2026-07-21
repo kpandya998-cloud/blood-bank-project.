@@ -1,0 +1,471 @@
+:root {
+  --primary: #D32F2F;
+  --secondary: #1565C0;
+  --background: #F5F7FA;
+  --surface: #ffffff;
+  --dark: #1f2937;
+  --muted: #6c7280;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: var(--background);
+  color: var(--dark);
+}
+
+body a {
+  text-decoration: none;
+}
+
+.hero-section {
+  background: linear-gradient(180deg, rgba(211,47,47,0.95) 0%, rgba(21,101,192,0.95) 100%), url('../Photos/bb1.jpg') center/cover no-repeat;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(13, 23, 49, 0.35);
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-card {
+  backdrop-filter: blur(12px);
+}
+
+.section-header h2,
+.section-header p,
+h2,
+h3,
+h4,
+h5 {
+  line-height: 1.3;
+}
+
+.stats-card,
+.feature-card,
+.process-card,
+.result-card,
+.hospital-card {
+  background: var(--surface);
+}
+
+.stats-card {
+  border: 1px solid rgba(211, 47, 47, 0.1);
+}
+
+.feature-card,
+.process-card,
+.result-card,
+.hospital-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.feature-card:hover,
+.process-card:hover,
+.result-card:hover,
+.hospital-card:hover,
+.stats-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 45px rgba(80, 73, 107, 0.08);
+}
+
+.icon-box,
+.process-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+}
+
+.icon-box {
+  border: 1px solid rgba(211, 47, 47, 0.18);
+}
+
+.feature-card h5,
+.process-card h5 {
+  font-weight: 600;
+}
+
+.result-card,
+.hospital-card,
+.process-card,
+.feature-card {
+  border: 1px solid rgba(15, 23, 42, 0.05);
+}
+
+.cta-banner {
+  border-radius: 32px 32px 12px 12px;
+}
+
+.footer {
+  font-size: 0.95rem;
+}
+
+.footer-link {
+  color: var(--muted);
+}
+
+.footer-link:hover {
+  color: var(--primary);
+}
+
+#scrollTopBtn {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  width: 48px;
+  height: 48px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.page-loader {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.7);
+  z-index: 1050;
+  opacity: 1;
+  transition: opacity 0.4s ease;
+  /* CSS fallback: automatically hide loader after 1s so links remain clickable even if JS fails */
+  animation: pageLoaderAutoHide 0.4s ease 1 1s forwards;
+}
+
+.page-loader.fade-out {
+  opacity: 0;
+}
+
+@keyframes pageLoaderAutoHide {
+  to {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .hero-section {
+    min-height: auto;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+}
+
+/* Emergency Section Enhancements */
+.blood-btn {
+  font-weight: 600;
+  padding: 8px 12px;
+  transition: all 0.3s ease;
+  border: 2px solid #D32F2F;
+}
+
+.blood-btn:hover {
+  background-color: #D32F2F;
+  color: white;
+}
+
+.blood-btn.active {
+  background-color: #D32F2F;
+  color: white;
+}
+
+.hospital-result-card {
+  border: 1px solid rgba(211, 47, 47, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.hospital-result-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(211, 47, 47, 0.15);
+  border-color: #D32F2F;
+}
+
+.hospital-result-card img {
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.hospital-result-card:hover img {
+  transform: scale(1.05);
+}
+
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px);
+}
+
+#emergencyCity {
+  border: 2px solid #E5E7EB;
+  transition: border-color 0.3s ease;
+}
+
+#emergencyCity:focus {
+  border-color: #D32F2F;
+  box-shadow: 0 0 0 3px rgba(211, 47, 47, 0.1);
+}
+
+.alert-danger {
+  border-top: 4px solid #D32F2F;
+}
+
+/* ============================================
+   NAVBAR STYLING
+   ============================================ */
+.navbar {
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar-brand {
+  font-size: 1.45rem;
+  letter-spacing: -0.5px;
+}
+
+.navbar .nav-link {
+  position: relative;
+  font-weight: 500;
+  color: var(--dark) !important;
+  padding: 0.4rem 0.65rem !important;
+  font-size: 0.88rem;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+}
+
+.navbar .nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0.65rem;
+  right: 0.65rem;
+  bottom: 2px;
+  height: 2.5px;
+  background: var(--primary);
+  border-radius: 4px;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+  color: var(--primary) !important;
+}
+
+.navbar .nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+.navbar .nav-link.active {
+  color: var(--primary) !important;
+}
+
+.navbar .nav-link.active::after {
+  transform: scaleX(1);
+}
+
+/* Navbar buttons */
+.navbar .btn-outline-danger {
+  border-width: 2px;
+  font-weight: 600;
+  padding: 0.3rem 0.9rem;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+}
+
+.navbar .btn-outline-danger:hover {
+  background: var(--primary);
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(211, 47, 47, 0.3);
+}
+
+.navbar .btn-danger {
+  font-weight: 600;
+  padding: 0.3rem 0.9rem;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+}
+
+.navbar .btn-danger:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(211, 47, 47, 0.35);
+}
+
+/* Mobile navbar improvements */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background: var(--surface);
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    margin-top: 0.5rem;
+  }
+
+  .navbar .nav-link::after {
+    display: none;
+  }
+
+  .navbar .nav-link {
+    padding: 0.6rem 1rem !important;
+    border-radius: 8px;
+  }
+
+  .navbar .nav-link:hover {
+    background: rgba(211, 47, 47, 0.06);
+  }
+
+  .navbar .nav-link.active {
+    background: rgba(211, 47, 47, 0.08);
+  }
+
+  .navbar .btn-outline-danger,
+  .navbar .btn-danger {
+    display: block;
+    text-align: center;
+    margin: 0.3rem 0 !important;
+  }
+
+  header.sticky-top {
+    top: 0 !important;
+  }
+}
+
+/* ============================================
+   EMERGENCY STICKY BANNER
+   ============================================ */
+.emergency-sticky-top {
+  position: sticky;
+  top: 0;
+  z-index: 1060;
+  background: linear-gradient(135deg, #D32F2F 0%, #B71C1C 100%);
+  padding: 10px 0;
+  box-shadow: 0 4px 20px rgba(211, 47, 47, 0.4);
+}
+
+.emergency-sticky-top .emergency-icon {
+  animation: pulse-emergency 1.5s infinite;
+  display: inline-block;
+}
+
+@keyframes pulse-emergency {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.1); }
+}
+
+.emergency-sticky-top + header.sticky-top {
+  top: 0;
+}
+
+/* Header adjustment when emergency banner is present on emergency page */
+.emergency-page header.sticky-top {
+  top: 0;
+}
+
+.emergency-sticky-top .btn-light {
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.emergency-sticky-top .btn-light:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 767.98px) {
+  .emergency-sticky-top {
+    padding: 8px 0;
+  }
+  .emergency-sticky-top .fs-6 {
+    font-size: 0.85rem !important;
+  }
+  .emergency-sticky-top .btn-sm {
+    font-size: 0.8rem;
+  }
+}
+
+/* ============================================
+   IMAGE UTILITIES
+   ============================================ */
+.img-wrapper {
+  overflow: hidden;
+  border-radius: inherit;
+}
+
+.img-zoom {
+  transition: transform 0.4s ease;
+}
+
+.img-zoom:hover {
+  transform: scale(1.08);
+}
+
+.img-overlay-dark {
+  position: relative;
+}
+
+.img-overlay-dark::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.4), transparent);
+  border-radius: inherit;
+}
+
+/* ============================================
+   CARD ENHANCEMENTS
+   ============================================ */
+.card-image-top {
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+
+.rounded-card-img {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* ============================================
+   SECTION ENHANCEMENTS
+   ============================================ */
+.section-divider {
+  width: 60px;
+  height: 3px;
+  background: var(--primary);
+  border-radius: 4px;
+  margin: 0.5rem 0 1rem;
+}
+
+/* ============================================
+   BODY ADJUSTMENTS FOR EMERGENCY PAGE
+   ============================================ */
+body.has-emergency-banner {
+  padding-top: 0;
+}

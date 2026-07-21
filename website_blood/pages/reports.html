@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Reports dashboard for BloodConnect admin including stock, hospital, donor and monthly donation reports." />
+  <title>Reports | BloodConnect Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.4/font/bootstrap-icons.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body class="bg-light">
+  <div class="container-fluid">
+    <div class="row">
+      <aside class="col-lg-3 col-xl-2 bg-white min-vh-100 border-end p-4">
+        <a class="navbar-brand fw-bold text-danger mb-4 d-block" href="admin-dashboard.html">BloodConnect</a>
+        <nav class="nav flex-column gap-2">
+          <a class="nav-link rounded-3 text-dark" href="admin-dashboard.html"><i class="bi bi-speedometer2 me-2"></i>Dashboard</a>
+          <a class="nav-link rounded-3 text-dark" href="manage-hospitals.html"><i class="bi bi-building me-2"></i>Manage Hospitals</a>
+          <a class="nav-link rounded-3 text-dark" href="blood-stock.html"><i class="bi bi-droplet-half me-2"></i>Blood Stock</a>
+          <a class="nav-link rounded-3 text-dark" href="blood-requests.html"><i class="bi bi-card-list me-2"></i>Blood Requests</a>
+          <a class="nav-link rounded-3 text-dark" href="donation-history.html"><i class="bi bi-clock-history me-2"></i>Donation History</a>
+          <a class="nav-link active rounded-3 text-dark bg-danger bg-opacity-10" href="reports.html"><i class="bi bi-bar-chart-line me-2"></i>Reports</a>
+        </nav>
+      </aside>
+      <main class="col-lg-9 col-xl-10 p-4">
+        <div class="d-flex justify-content-between align-items-center mb-4 gap-3">
+          <div>
+            <h1 class="h3 fw-bold mb-1">Reports</h1>
+            <p class="text-muted mb-0">Review key performance metrics and generate printable reports.</p>
+          </div>
+          <div class="btn-group">
+            <button class="btn btn-outline-secondary">Download PDF</button>
+            <button class="btn btn-danger">Print</button>
+          </div>
+        </div>
+        <div class="row g-4 mb-4">
+          <div class="col-md-6 col-xl-3">
+            <div class="card rounded-4 shadow-sm border-0 p-4 h-100">
+              <h6 class="text-muted">Blood Stock Report</h6>
+              <p class="h4 fw-bold text-danger mb-1">1,420 Units</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-3">
+            <div class="card rounded-4 shadow-sm border-0 p-4 h-100">
+              <h6 class="text-muted">Hospital Report</h6>
+              <p class="h4 fw-bold text-danger mb-1">358 Locations</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-3">
+            <div class="card rounded-4 shadow-sm border-0 p-4 h-100">
+              <h6 class="text-muted">Donor Report</h6>
+              <p class="h4 fw-bold text-danger mb-1">8,750 Donors</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-3">
+            <div class="card rounded-4 shadow-sm border-0 p-4 h-100">
+              <h6 class="text-muted">Monthly Donation</h6>
+              <p class="h4 fw-bold text-danger mb-1">420 Donations</p>
+            </div>
+          </div>
+        </div>
+        <div class="card rounded-4 shadow-sm border-0 p-4 mb-4">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h5 class="mb-0">Blood Stock Trend</h5>
+            <span class="badge bg-primary bg-opacity-10 text-primary">Monthly</span>
+          </div>
+          <div class="ratio ratio-16x9 bg-light rounded-4 d-flex align-items-center justify-content-center">
+            <span class="text-muted">Chart placeholder</span>
+          </div>
+        </div>
+        <div class="card rounded-4 shadow-sm border-0 p-4">
+          <h5 class="fw-bold mb-3">Report Summary</h5>
+          <p class="text-muted">Analyze blood stock and hospital performance with clear sections for operational and donor activity.</p>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Blood Stock Report: Detailed unit availability per blood group.</li>
+            <li class="list-group-item">Hospital Report: Verified hospital status and emergency readiness.</li>
+            <li class="list-group-item">Donor Report: Active donor count and donation frequency.</li>
+            <li class="list-group-item">Monthly Donation Report: Trends and monthly totals.</li>
+          </ul>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/script.js"></script>
+</body>
+</html>
